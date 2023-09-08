@@ -1,0 +1,28 @@
+<!-- <mat-card>
+    <mat-list>
+        <div mat-subheader><h1>All Attendances</h1></div>
+        <mat-list-item *ngFor="let c of _attendanceList">
+            
+            <mat-list>
+                <mat-list-item>
+                  <span matListItemTitle>{{c.user.fname}}</span>
+                  <span matListItemLine>{{c.ispresent}}</span>
+                  <span matListItemLine>{{c.attendancedate}}</span>
+                </mat-list-item>
+                
+              </mat-list>
+            
+        </mat-list-item>
+    </mat-list>
+    <div class="container text-center mt20">
+    <button routerLink="/admin/add-attendance" mat-raised-button color="accent">Add New Attendance</button>
+   
+        
+</div>
+</mat-card> -->
+<ag-grid-angular 
+style="width: 500px; height: 500px;" 
+class="ag-theme-alpine"
+[rowData]="_attendanceList" 
+[columnDefs]="columnDefs">
+</ag-grid-angular>

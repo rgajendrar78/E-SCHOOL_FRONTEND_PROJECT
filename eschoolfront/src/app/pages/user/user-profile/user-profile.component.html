@@ -1,0 +1,70 @@
+<!-- <mat-card>
+    <h1 class="ml10">Profile Details</h1>
+    {{loginData | json}}
+    <mat-card-content>
+        <div class="bootstrap wrapper">
+            <div class="container">
+                    <div class="container text-center"> 
+                        <img src="../../../assets/students.png" alt=""
+                        class="student-image">
+                        <h1 class="mt20" >Student</h1>  
+                    </div>
+               <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        
+                        <table class="table text-center">
+                            <tr>
+                                <td>ID</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td class="">Gajendra Singh</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Gajendar@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile No</td>
+                                <td>123456</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>Active</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    
+</mat-card> -->
+
+
+<mat-card>
+    <mat-list>
+        <div mat-subheader><h1>PROFILE DETAILS</h1></div>
+        <mat-list-item *ngFor="let c of loginData ">
+            
+           <span matListItemTitle>ID :{{c.id}}</span>
+            <span matListItemLine>NAME :{{c.fname}}{{c.lname}}</span>
+            <span matListItemLine>MOBILE NO :{{c.mobileno}}</span>
+            <span matListItemLine>EMAIL :{{c.email}}</span>
+            <span matListItemLine>ACTIVE :{{c.isenable}}</span>
+
+
+
+            
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+</mat-card>
+
+<!-- <ag-grid-angular 
+	style="width: 800px; height: 500px;" 
+	class="ag-theme-alpine"
+	[rowData]="loginData" 
+	[columnDefs]="columnDefs">
+</ag-grid-angular> -->

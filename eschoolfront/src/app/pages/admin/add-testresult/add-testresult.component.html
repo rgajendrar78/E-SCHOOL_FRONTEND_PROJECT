@@ -1,0 +1,164 @@
+<mat-card>
+    <h1 class="ml20">Add Test Result</h1>
+    <!-- {{test | json}} -->
+    <mat-card-content>
+       <div class="bootstrap-wrapper">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form (ngSubmit)="formSubmit()">
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Student Name</mat-label>
+                        <mat-select required name="name"   [(ngModel)]="test.user.id">
+                          <mat-option *ngFor="let c of users" [value]="c.id">
+                            {{c.fname}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                      
+
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Exam Date</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="testdate" 
+                           matInput 
+                           placeholder="Enter Date"
+                           [(ngModel)]="test.testdate"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Sem</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="sem" 
+                           matInput 
+                           placeholder="Enter Sem"
+                           [(ngModel)]="test.sem"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Class</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="Classs" 
+                           matInput 
+                           placeholder="Enter Class"
+                           [(ngModel)]="test.classs"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Subject</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="sub" 
+                           matInput 
+                           placeholder="Enter First Subject"
+                           [(ngModel)]="test.sub"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Marks</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="mark"
+                           matInput 
+                           placeholder="Enter First Subject Mark"
+                           [(ngModel)]="test.mark"
+                        >
+                    </mat-form-field>
+
+                    <!-- <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Subject</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="sub2" 
+                           matInput 
+                           placeholder="Enter Second Subject"
+                           [(ngModel)]="test.sub2" -->
+                        
+                    <!-- </mat-form-field>
+
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Marks</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="sub2mark" 
+                           matInput 
+                           placeholder="Enter Second Subject Marks"
+                           [(ngModel)]="test.sub2mark"
+                        >
+                    </mat-form-field> -->
+
+                    <!-- <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Subject</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="sub3" 
+                           matInput 
+                           placeholder="Enter Third Subject"
+                           [(ngModel)]="test.sub3"
+                        >
+                    </mat-form-field> -->
+
+                    <!-- <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Marks</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="sub3mark" 
+                           matInput 
+                           placeholder="Enter Third Subject Marks"
+                           [(ngModel)]="test.sub3mark"
+                        >
+                    </mat-form-field> -->
+
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Result</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="result" 
+                           matInput 
+                           placeholder="Enter Result"
+                           [(ngModel)]="test.result"
+                        >
+                    </mat-form-field>
+
+                  
+
+                    <div class="container text-center mt15">
+                        <button mat-raised-button color="accent">Add</button>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+       </div>
+
+    </mat-card-content>
+</mat-card>
+

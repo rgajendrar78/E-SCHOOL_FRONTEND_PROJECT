@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+    <div class="container" > 
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <mat-card>
+                <div class="container text-center">
+                    <img width="50" height="50" src="../../../assets/schoollogo.jfif" alt="">
+                </div>
+                <h1 class="text-center">User Enable And Disable</h1>
+
+                <!-- {{user1 | json}} -->
+
+                <form (ngSubmit)="formSubmit()">
+                    <!-- firstname feild-->
+                     <mat-form-field class="ml50" appearance="outline">
+                        <mat-label>Student Name</mat-label>
+                        <mat-select required name="name"   [(ngModel)]="user1.id">
+                          <mat-option *ngFor="let c of users1" [value]="c.id">
+                            {{c.fname}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+
+                      <mat-form-field class="ml10" appearance="outline">
+                        <mat-label>Active</mat-label>
+                        <mat-select required name="isenable" [(ngModel)]="user1.isenable">
+                          <mat-option *ngFor="let c of active" [value]="c.isenable">
+                            {{c.isenable}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                      <!-- <mat-form-field class="full-width mat-checkbox"  appearance="outline">
+                        <mat-label>Active</mat-label>
+                        <input required
+                        [(ngModel)]="user1.isenable"
+                        name="isenable"
+                        type="text" matInput placeholder="Enter Here">
+                      </mat-form-field> -->
+                      <div class="container text-center mat-checkbox">
+                        <button type="submit" mat-raised-button color="primary">Update</button>
+                      </div>
+                 </form>
+              </mat-card>
+            </div> 
+        </div>
+    </div>
+</div>
+

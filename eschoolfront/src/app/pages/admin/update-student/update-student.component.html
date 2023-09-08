@@ -1,0 +1,76 @@
+<div class="bootstrap-wrapper">
+    <div class="container" > 
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <!-- <div class="container text-center">
+                    <img width="50" height="50" src="../../../assets/schoollogo.jfif" alt="">
+                </div> -->
+                <h1 class="text-center">Update student Details</h1>
+
+                <!-- {{user | json}} -->
+
+                <form (ngSubmit)="formSubmit()">
+                    <!-- firstname feild-->
+                    <mat-form-field  class="full-width mat-checkbox" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input required
+                        [(ngModel)]="user.fname"
+                        name="fname"
+                        matInput placeholder="Enter Here">
+                      </mat-form-field>
+                      
+                       <!-- lastname feild-->
+                    <mat-form-field class="full-width mat-checkbox" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input required
+                        [(ngModel)]="user.lname"
+                        name="lname"
+                        matInput placeholder="Enter Here">
+                      </mat-form-field>
+
+                       <!-- email feild-->
+                    <mat-form-field class="full-width mat-checkbox" appearance="outline">
+                        <mat-label>Email id</mat-label>
+                        <input required
+                        [(ngModel)]="user.email"
+                        name="email" type="email" matInput placeholder="Enter Here">
+                      </mat-form-field>
+
+                       <!-- password feild-->
+                    <!-- <mat-form-field class="full-width mat-checkbox" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input required
+                        [(ngModel)]="user.password"
+                        name="password" type="password mat-checkbox" matInput placeholder="Enter Here">
+                      </mat-form-field> -->
+
+                       <!-- mobile no feild-->
+                    <mat-form-field class="full-width mat-checkbox" appearance="outline">
+                        <mat-label>Mobile No</mat-label>
+                        <input required
+                        [(ngModel)]="user.mobileno"
+                        name="mobileno"
+                        type="number" matInput placeholder="Enter Here">
+                      </mat-form-field>
+
+                      <mat-form-field class="full-width mat-checkbox" appearance="outline">
+                        <mat-label>status</mat-label>
+                        <input required
+                        [(ngModel)]="user.isenable"
+                        name="isenable"
+                        type="number" matInput placeholder="Enter Here">
+                      </mat-form-field>
+
+                      <div class="container text-center mat-checkbox">
+                        <button type="submit" mat-raised-button color="primary">update</button>
+                        <button style="margin-left: 20px;" mat-raised-button color="accent">Clear</button>
+
+                      </div>
+                </form>
+            </mat-card>
+            </div> 
+        </div>
+    </div>
+</div>
+

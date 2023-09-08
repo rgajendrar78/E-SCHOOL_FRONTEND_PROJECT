@@ -1,0 +1,18 @@
+<!-- {{user | json}} -->
+ <mat-card><div class="container mt10"><mat-label>Find Student </mat-label>
+    <input class="mb20" type="text" matInput
+           placeholder="Enter  Name" [(ngModel)]="user.name">
+           <button (click)="findUser()"  routerLink="/teacher/students" mat-raised-button class="ml20" color="accent">Search</button>
+        </div>
+</mat-card>
+<ag-grid-angular 
+	style="width: 800px; height: 500px;" 
+	class="ag-theme-alpine"
+	[rowData]="userList" 
+	[columnDefs]="columnDefs">
+</ag-grid-angular>
+
+
+
+
+

@@ -1,0 +1,25 @@
+<!-- <mat-card>
+    <mat-list>
+        <div mat-subheader><h1>All Assigments</h1></div>
+        <mat-list-item *ngFor="let c of assignmentList">
+            
+            <span matListItemTitle>{{c.title}}</span>
+            <span matListItemLine>{{c.description}}</span>
+            
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+    <div class="container text-center mt20">
+    <button routerLink="/admin/add-assignment" mat-raised-button color="accent">Add New Assignments</button>
+   
+        
+</div>
+</mat-card> -->
+
+
+<ag-grid-angular 
+	style="width: 400px; height: 500px;" 
+	class="ag-theme-alpine"
+	[rowData]="assignmentList" 
+	[columnDefs]="columnDefs">
+</ag-grid-angular>

@@ -1,0 +1,48 @@
+<mat-card>
+    <h1 class="ml20">Add New Assignment</h1>
+    <!-- {{assignment | json}} -->
+    <mat-card-content>
+       <div class="bootstrap-wrapper">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form (ngSubmit)="formSubmit()">
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Student Name</mat-label>
+                        <mat-select name="user" [(ngModel)]="assignment.user.id">
+                            
+                          <mat-option *ngFor="let c of users" [value]="c.id">
+                             {{c.fname}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Title</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="title" 
+                           matInput 
+                           placeholder="Enter Title"
+                           [(ngModel)]="assignment.title"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea name="description" matInput placeholder="Enter Assignment Description" rows="10" [(ngModel)]="assignment.description" ></textarea>
+                    </mat-form-field>
+
+                    <div class="container text-center mt15">
+                        <button mat-raised-button color="accent">Add</button>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+       </div>
+
+    </mat-card-content>
+</mat-card>

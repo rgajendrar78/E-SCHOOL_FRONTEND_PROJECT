@@ -1,0 +1,84 @@
+<mat-card>
+    <h1 class="ml20">Add Time Table</h1>
+    <!-- {{assignment | json}} -->
+    <mat-card-content>
+       <div class="bootstrap-wrapper">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form (ngSubmit)="formSubmit()">
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Class</mat-label>
+                        <input
+                         required
+                         autofocus
+                          type="text"
+                           name="classs" 
+                           matInput 
+                           placeholder="Enter Class"
+                           [(ngModel)]="time.classs"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Sem</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="sem" 
+                           matInput 
+                           placeholder="Enter Sem"
+                           [(ngModel)]="time.sem"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Subject</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="subject" 
+                           matInput 
+                           placeholder="Enter Subject"
+                           [(ngModel)]="time.subject"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>Start Time</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="starttime" 
+                           matInput 
+                           placeholder="Start Time"
+                           [(ngModel)]="time.starttime"
+                        >
+                    </mat-form-field>
+
+                    <mat-form-field class="w100 ml20" appearance="outline">
+                        <mat-label>End Time</mat-label>
+                        <input
+                        required
+                         autofocus
+                          type="text"
+                           name="endtime" 
+                           matInput 
+                           placeholder="End Time"
+                           [(ngModel)]="time.endtime"
+                        >
+                    </mat-form-field>
+                    <div class="container text-center mt15">
+                        <button mat-raised-button color="accent">Add</button>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+       </div>
+
+    </mat-card-content>
+</mat-card>
+
